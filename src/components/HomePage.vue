@@ -1,6 +1,6 @@
 <template>
   <div
-    class="main-content"
+    class="main-content relative"
     :style="{
       'background-size': 'cover',
       '-webkit-filter': 'blur(8px)',
@@ -9,8 +9,15 @@
       height: '100vh',
     }"
   >
-    <div class="container">
-      <h2>Calculating your total costs</h2>
+    <div
+      :style="{
+        '-webkit-filter': 'blur(px)',
+        filter: 'blur(0px)',
+      }"
+    >
+      <h2 class="text-3xl font-bold underline z-10">
+        Calculating your total costs
+      </h2>
     </div>
   </div>
 </template>
