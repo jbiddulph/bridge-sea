@@ -28,7 +28,9 @@
       >
         Calculating your total costs
       </h2>
-      <ProductItem :items="productItems" />
+      <Transition name="products-fade">
+        <ProductItem v-if="loadedProducts" :items="productItems" />
+      </Transition>
     </div>
   </div>
 </template>
@@ -43,6 +45,7 @@ export default {
   },
   data() {
     return {
+      loadedProducts: false,
       productItems: [
         {
           id: 1,
@@ -93,6 +96,9 @@ export default {
       totalPrice: 0,
     };
   },
+  mounted() {
+    this.loadedProducts = true;
+  },
 };
 </script>
 
@@ -116,5 +122,23 @@ export default {
 li.item {
   width: 324px;
   height: 72px;
+}
+.products-fade-enter-from {
+  opacity: 0;
+}
+.products-fade-enter-to {
+  opacity: 1;
+}
+.products-fade-enter-active {
+  transition: all 2s ease-in;
+}
+.products-fade-leave-from {
+  opacity: 1;
+}
+.products-fade-leave-to {
+  opacity: 0;
+}
+.products-fade-leave-active {
+  transition: all 2s ease-out;
 }
 </style>
