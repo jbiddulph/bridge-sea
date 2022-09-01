@@ -47,7 +47,17 @@
       </div>
     </li>
   </ul>
-  <div class="flex flex-row justify-evenly">
+  <div
+    class="
+      flex
+      md:flex-row
+      flex-col
+      md:justify-evenly
+      mx-auto
+      items-center
+      md:items-start
+    "
+  >
     <div class="invisible w-32">&nbsp;</div>
     <div
       class="

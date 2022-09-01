@@ -28,9 +28,9 @@
       >
         Calculating your total costs
       </h2>
-      <Transition name="products-fade">
+      <transition name="products-fade">
         <ProductItem v-if="loadedProducts" :items="productItems" />
-      </Transition>
+      </transition>
     </div>
   </div>
 </template>
