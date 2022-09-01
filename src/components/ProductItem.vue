@@ -48,7 +48,7 @@
     </li>
   </ul>
   <div class="flex flex-row justify-evenly">
-    <div>&nbsp;</div>
+    <div class="invisible w-32">&nbsp;</div>
     <div
       class="
         total-price
@@ -84,7 +84,35 @@
         >
       </div>
     </div>
-    <div>3</div>
+    <div
+      class="
+        rounded-l-full rounded-r-full
+        text-white
+        bg-red
+        h-10
+        flex flex-row
+        justify-between
+        items-center
+        w-32
+        px-4
+        py-2
+        hover:cursor-pointer
+      "
+    >
+      <span>Continue</span>
+      <span
+        class="
+          continue-button
+          text-center
+          justify-center
+          bg-white
+          p-1
+          rounded-full
+          flex
+        "
+        ><i class="fa fa-play text-red"></i
+      ></span>
+    </div>
   </div>
 </template>
 
@@ -151,5 +179,9 @@ li:hover .circled-border {
 }
 li:hover span.price {
   color: #ffffff;
+}
+.continue-button {
+  height: 25px;
+  width: 25px;
 }
 </style>
